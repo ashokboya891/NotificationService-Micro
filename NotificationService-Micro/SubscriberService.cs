@@ -1,4 +1,5 @@
-﻿using StackExchange.Redis;
+﻿using NotificationService_Micro.Models;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;

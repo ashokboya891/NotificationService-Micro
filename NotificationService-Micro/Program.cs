@@ -8,6 +8,8 @@ var host = Host.CreateDefaultBuilder(args)
     {
         services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(hostContext.Configuration["Redis:ConnectionString"]));
         services.AddHostedService<SubscriberService>();
+        services.AddHostedService<NotificationWorker>();
+        services.AddHostedService<InventoryService>();
     })
     .Build();
 
